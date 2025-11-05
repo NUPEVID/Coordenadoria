@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAS - Coordenadoria de Atividades Sociais</title>
+    
+    <!-- Importação do Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Importação da fonte Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        // Configuração personalizada do Tailwind para adicionar as cores da logo
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Azul principal da logo
+                        'cas-blue': '#0a2c5a',
+                        // Dourado/Amarelo da logo
+                        'cas-gold': '#fbc02d',
+                    },
+                    fontFamily: {
+                        // Define 'Inter' como a fonte padrão
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        /* Estilo base para garantir a aplicação da fonte */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- ==== SEÇÃO DE NAVEGAÇÃO ==== -->
+    <nav class="bg-cas-blue shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo e Título -->
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- Usando o nome do arquivo que você enviou -->
+                    <img class="h-16 w-16" src="imagens/Cas.png" alt="Logo CAS PMRO">
+                    <span class="text-white font-bold ml-3 text-lg sm:text-xl hidden sm:block">
+                        Coordenadoria de Atividades Sociais
+                    </span>
+                </div>
+                
+                <!-- Menu Principal (Início, Programas) -->
+                <div class="flex items-center space-x-4 sm:space-x-6">
+                    <a href="#" class="px-3 py-2 rounded-md text-base sm:text-lg font-medium text-white bg-white bg-opacity-10 hover:bg-opacity-20 transition duration-300">
+                        Início
+                    </a>
+                    <a href="#programas" class="px-3 py-2 rounded-md text-base sm:text-lg font-medium text-gray-300 hover:text-white hover:bg-white hover:bg-opacity-10 transition duration-300">
+                        Programas
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==== SEÇÃO PRINCIPAL (HERO) ==== -->
+    <main>
+        <div class="relative w-full h-[60vh] min-h-[400px] flex items-center justify-center text-center px-4 overflow-hidden">
+            <!-- Overlay com gradiente usando as cores da logo -->
+            <div class="absolute inset-0 bg-gradient-to-r from-cas-blue to-blue-800 opacity-95"></div>
+            
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <!-- Título Principal -->
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight shadow-sm">
+                    Bem-vindo à <span class="text-cas-gold">CAS PMRO</span>
+                </h1>
+                
+                <!-- Subtítulo -->
+                <p class="mt-6 text-xl sm:text-2xl text-gray-200">
+                    Promovendo o bem-estar e a integração da família policial militar com a Sociedade.
+                </p>
+                
+                <!-- Botão de Ação -->
+                <a href="#sobre" class="mt-10 inline-block bg-cas-gold text-cas-blue font-bold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
+                    Saiba Mais
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ==== SEÇÃO SOBRE NÓS ==== -->
+    <section id="sobre" class="py-20 sm:py-28 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Imagem Placeholder -->
+                <div class="bg-gray-200 rounded-lg shadow-lg h-80 flex items-center justify-center">
+                    <!-- Você pode substituir isso por uma imagem real -->
+                    <img src="https://placehold.co/600x400/0a2c5a/fbc02d?text=Nossa+Missão" alt="Imagem da equipe ou de um evento da CAS" class="w-full h-full object-cover rounded-lg">
+                </div>
+                
+                <!-- Texto "Sobre Nós" -->
+                <div>
+                    <h2 class="text-3xl font-bold text-cas-blue mb-4">Sobre a Coordenadoria</h2>
+                    <p class="text-gray-700 text-lg mb-4">
+                        A Coordenadoria de Atividades Sociais (CAS) é o setor da Polícia Militar de Rondônia dedicado a apoiar e fortalecer os laços da Comunidade com a Polícia Militar.
+                    </p>
+                    <p class="text-gray-700 text-lg">
+                        Sendo órgão de assessoria do Comando Geral da PMRO, responsável por assessorar na implementação e consolidação da filosofia de policiamento comunitário e de Direitos Humanos, criado por meio da Lei Estadual n. 4302/2018 de 25 de junho de 2018, que dispõe sobre a Organização Básica e as atribuições dos Órgãos da Polícia Militar do Estado de Rondônia.
+                        abrangendo desde apoio psicológico até atividades recreativas e educacionais.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==== SEÇÃO PROGRAMAS ==== -->
+    <section id="programas" class="py-20 sm:py-28 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-cas-blue">Nossos Programas</h2>
+                <p class="text-lg text-gray-700 mt-2">Conheça as iniciativas que fazem a diferença.</p>
+            </div>
+            
+            <!-- Cards dos Programas -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                    <div class="bg-cas-blue p-6">
+                        <h3 class="text-2xl font-bold text-white">PROERD</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">
+                            Programa Educacional de Resistência às Drogas e à Violência, é uma iniciativa policial em parceria com escolas e famílias, que visa prevenir o uso de drogas e a violência entre crianças e adolescentes. 
+                        </p>
+                        <a href="https://app.powerbi.com/reportEmbed?reportId=593bdf20-93eb-4a63-8420-52fc2ef8f1fd&autoAuth=true&ctid=35c23124-0cf9-4d26-a4e0-76416152f7dd" target="_blank" class="font-medium text-cas-blue hover:text-blue-900">Ver detalhes &rarr;</a>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                    <div class="bg-cas-blue p-6">
+                        <h3 class="text-2xl font-bold text-white">NUPEVID</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">
+                            Núcleo de Prevenção e Enfrentamento à Violência Doméstica e Famíliar contra a Mulher.
+                        </p>
+                        <a href="https://nupevid.github.io/nupevid/estat%C3%ADstica.html" target="_blank" class="font-medium text-cas-blue hover:text-blue-900">Ver detalhes &rarr;</a>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                    <div class="bg-cas-blue p-6">
+                        <h3 class="text-2xl font-bold text-white">PROEPM</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4">
+                            Programa Educacional Policial Militar Mirim
+                        </p>
+                        <a href="https://app.powerbi.com/reportEmbed?reportId=5d60a79a-b26e-4ee9-a649-303aa128dfb2&autoAuth=true&ctid=35c23124-0cf9-4d26-a4e0-76416152f7dd" target="_blank" class="font-medium text-cas-blue hover:text-blue-900">Ver detalhes &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==== RODAPÉ ==== -->
+    <footer class="bg-cas-blue text-gray-300 py-10">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Coordenadoria de Atividades Sociais - PMRO.</p>
+            <p class="mt-2 text-sm">Todos os direitos reservados.</p>
+            <p class="mt-2 text-sm">Rua das Associações, 2661 - Costa e Silva, Porto Velho - RO</p>
+        </div>
+    </footer>
+
+</body>
+</html>
